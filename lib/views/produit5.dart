@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:foodgo/views/payment.dart';
 import 'package:iconly/iconly.dart';
 
 import 'home.dart';
@@ -223,26 +224,31 @@ class _produit5State extends State<produit5> {
                   ]
                 ),
                 SizedBox(width: 30,),
-                Container(
-                  height: 70,
-                  width: 200,
-                  decoration: BoxDecoration(
-                    color: Color(0xffEF2A39),
-                    borderRadius: BorderRadius.circular(18),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5), // Couleur de l'ombre
-                        spreadRadius: 8, // Étalement de l'ombre
-                        blurRadius: 13, // Flou de l'ombre
-                        offset: Offset(0, 3), // Décalage de l'ombre (x, y)
-                      ),
-                    ],
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>payment()));
+                  },
+                  child: Container(
+                    height: 70,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      color: Color(0xffEF2A39),
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5), // Couleur de l'ombre
+                          spreadRadius: 8, // Étalement de l'ombre
+                          blurRadius: 13, // Flou de l'ombre
+                          offset: Offset(0, 3), // Décalage de l'ombre (x, y)
+                        ),
+                      ],
+                    ),
+                    child: Center(child: Text("ORDER NOW", style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold
+                    ),)),
                   ),
-                  child: Center(child: Text("ORDER NOW", style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold
-                  ),)),
                 ),
               ],)
             ],),
