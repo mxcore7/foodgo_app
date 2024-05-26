@@ -7,7 +7,6 @@ import 'home.dart';
 class profile extends StatefulWidget {
   const profile({super.key});
 
-
   @override
   State<profile> createState() => _profileState();
 }
@@ -112,10 +111,13 @@ class _profileState extends State<profile> {
                             ),
                             child: Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 25),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintStyle: TextStyle(color: Colors.red, fontSize: 50,fontWeight: FontWeight.bold),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 12),
+                                child: Text("Thé Çrãćkëúr'z",
+                                  style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
@@ -153,15 +155,18 @@ class _profileState extends State<profile> {
                             ),
                             child: Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 25),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintStyle: TextStyle(color: Colors.red, fontSize: 50,fontWeight: FontWeight.bold),
-                                ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 12),
+                                child: Text("tackeurz@freesurf.all",
+                                  style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.bold),
+                                  ),
+                              ),
                               ),
                             ),
                           ),
-                        ),
                         Positioned(
                             top: -3,
                             left: 25,
@@ -194,10 +199,13 @@ class _profileState extends State<profile> {
                             ),
                             child: Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 25),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintStyle: TextStyle(color: Colors.red, fontSize: 50,fontWeight: FontWeight.bold),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 12),
+                                child: Text("Akwa, bepanda vers la route 😂",
+                                  style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
@@ -235,10 +243,13 @@ class _profileState extends State<profile> {
                             ),
                             child: Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 25),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintStyle: TextStyle(color: Colors.red, fontSize: 50,fontWeight: FontWeight.bold),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 12),
+                                child: Text("..........",
+                                  style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
@@ -249,11 +260,19 @@ class _profileState extends State<profile> {
                             left: 25,
                             child: Container(
                                 color: Colors.white,
-                                child: Text("Password", style: TextStyle(
+                                child: Text("Password ", style: TextStyle(
                                   color: Colors.grey
                                 ),)
                             )
-                        )
+                        ),
+                          Positioned(
+                              top: -1,
+                              left: 80,
+                              child: Container(
+                                  color: Colors.white,
+                                  child: Icon(Icons.lock, size: 15,)
+                              )
+                          )
                       ],),
                     ),
                     Container(
@@ -358,7 +377,7 @@ class _profileState extends State<profile> {
                       border: Border.all(color: Color(0xffEF2A39),
                       width: 3),
                       borderRadius: BorderRadius.circular(20),
-                      image: DecorationImage(image: AssetImage("assets/image/image8.png"),
+                      image: DecorationImage(image: AssetImage("assets/image/mapp.jpg"),
                       fit: BoxFit.cover),
                       boxShadow: [
                         BoxShadow(

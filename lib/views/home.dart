@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:foodgo/views/customsupport.dart';
 import 'package:foodgo/views/produit1.dart';
 import 'package:foodgo/views/produit2.dart';
 import 'package:foodgo/views/produit3.dart';
@@ -81,7 +82,12 @@ class _homeState extends State<home> {
                   },
                     child: Icon(Icons.person_2_outlined, size: 30,color: Colors.white)),
                 SizedBox(width: 25,),
-                Icon(IconlyBold.chat, size: 30,color: Colors.white),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>customersupport()));
+                  },
+                    child: Icon(IconlyBold.chat, size: 30,color: Colors.white)
+                ),
                 Icon(Icons.favorite_outlined, size: 30,color: Colors.white),
               ],),
             ),
@@ -137,7 +143,6 @@ class _homeState extends State<home> {
                   height: 50,
                   width: 280,
                   decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
