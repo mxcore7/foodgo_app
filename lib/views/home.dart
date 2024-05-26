@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:foodgo/views/produit1.dart';
@@ -5,6 +6,7 @@ import 'package:foodgo/views/produit2.dart';
 import 'package:foodgo/views/produit3.dart';
 import 'package:foodgo/views/produit4.dart';
 import 'package:foodgo/views/produit5.dart';
+import 'package:foodgo/views/profile.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
@@ -73,7 +75,11 @@ class _homeState extends State<home> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                 Icon(Icons.home, size: 30,color: Colors.white),
-                Icon(Icons.person_2_outlined, size: 30,color: Colors.white),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>profile()));
+                  },
+                    child: Icon(Icons.person_2_outlined, size: 30,color: Colors.white)),
                 SizedBox(width: 25,),
                 Icon(IconlyBold.chat, size: 30,color: Colors.white),
                 Icon(Icons.favorite_outlined, size: 30,color: Colors.white),
